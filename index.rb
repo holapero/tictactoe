@@ -1,3 +1,12 @@
+print "Commands are top-left,top-middle, top-right,"
+
+print "Commands are middle-left,center, middle-right,"
+
+print "Commands are bottom-left,bottom-middle and bottom-right."
+puts "\n" * 5
+
+
+
 board = ["-","-","-","-","-","-","-","-"]
 
 
@@ -9,14 +18,16 @@ turns = 1
 
 while i <= 9 
 if i.even?
-    shape = "x"
+    shape = "X"
 else
-    shape = "o"
+    shape = "O"
 end
 
 
-
+puts "Enter your command"
 choice = gets.chomp
+
+
 
 
 
@@ -95,7 +106,7 @@ if turns.even? and turns >= 5
     c = players[1][-1] 
     z = (a + b + c)
     if z == 15 
-        puts puts "Player 0 wins"
+        puts puts "Player O wins"
     end
 end
 
